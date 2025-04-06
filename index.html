@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | [Marco Martorano]</title>
+  <title>Data Science Portfolio | [Tuo Nome]</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -36,7 +36,7 @@
     .paper {
       margin-bottom: 2rem;
     }
-    .paper img, .paper embed {
+    .paper img {
       width: 100%;
       max-width: 100%;
       border: 1px solid #ccc;
@@ -56,6 +56,18 @@
     a:hover {
       text-decoration: underline;
     }
+    .bio-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .bio-section img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
   </style>
 </head>
 <body>
@@ -67,7 +79,9 @@
   <div class="container">
     <section>
       <h2>Chi sono</h2>
-      <p>
+      <div class="bio-section">
+        <img src="profile.jpg" alt="La mia foto">
+        <p>
         Sono un ricercatore in astronomia all'Università di Gent (BE) con una forte passione per l'analisi dei dati. 
         Durante il mio dottorato, ho lavorato con grandi dataset basati principalmente sulle osservazioni dell' Hubble Space Telescope e del James Webb Space Telescope.
         Utilizzando le più tipiche librerie python (Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, etc) ho creato dei codici ottimizzati per estrarre ed investigare trend tra le migliaia di variabili contenute in questi dataset.
@@ -98,7 +112,7 @@
       </div>
       <div class="paper">
         <h3>La relazione tra massa e tasso di formazione stellare</h3>
-        <embed src="SFR_vs_mass_cc_medSersic_05z10_n05_n15_comaprison_half16-84_noAGNv2switch.jpg" type="application/pdf" width="100%" height="600px"/>
+        <img src="SFR_vs_mass_cc_medSersic_05z10_n05_n15_comaprison_half16-84_noAGNv2switch.jpg" alt="SFR-mass relation plot">
         <p>La presenza di una relazione tra la massa delle galassie e il loro tasso di formazione stellare é cosa nota: più una galassia è massiccia e più è alto il suo tasso di formazione stellare. Questo a meno che la galassia non sia "quiescente" ovvero che indipendentemente dalla sua massa, il suo tasso di formazione stellare diventa trascurabile.
         Come cambia la struttura delle galassie al variare della loro posizione in questo piano? In questo grafico mostriamo la standard deviation dell'indice utlizzato per descrivere la struttura delle galassie (L'indice di Sérsic - n), per galassie che condividono la stessa massa e lo stesso tasso di formazione stellare (galassie nello stesso hexbin).
         Quello che notiamo é che quando osserviamo le galassie nell'ottico, lo scatter é relativamente grande in tutto il piano tranne che per le galassie quiescenti (pannello di destra). Al contrario, quando osserviamo le galassie nell'infrarosso (pannello di sinistra), osserviamo che c'é solo una piccola regione del grafico dove la struttura delle galassie varia notevolmente!
@@ -106,7 +120,7 @@
       </div>
       <div class="paper">
         <h3>La relazione tra massa e struttura delle galassie </h3>
-        <embed src="n_vs_mass_Leja_2panels_zlinesCOBS.jpg" type="application/pdf" width="100%" height="600px"/>
+        <img src="n_vs_mass_Leja_2panels_zlinesCOBS.jpg" type="application/pdf" alt="n-mass relation plot">
         <p>Questo grafico mostra come varia la struttura delle galassie (qui rappresentata dall'indice di Sèrsic - n) in funzione della loro massa. Ogni linea rappresenta un sub-set di galassie osservate in diverse epoche cosmiche, da quando l'universo era ~11 miliardi di anni più giovane, fino a 5 miliardi di anni fà.
           Il grafico mostra che se osserviamo le galassie nell'infrarosso (pannello di sinistra) non vi è una grande differenza in funzione del tempo cosmico (tutte le linee sono più o meno sovrapposte), ma quando ci muoviamo nell'ottico notiamo che le galassie osservate ~5 miliardi di anni fa si scostano dalle altre, mostrando un indice notevolmente più alto.
         </p>
