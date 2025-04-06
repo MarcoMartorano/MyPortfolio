@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Science Portfolio | [Tuo Nome]</title>
+  <title>My Portfolio | [Marco Martorano]</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -19,10 +19,27 @@
       color: #fff;
       padding: 2rem;
       text-align: center;
+      position: relative;
     }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+    .cv-button {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+    .cv-button a {
+      background-color: #007acc;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .cv-button a:hover {
+      background-color: #005fa3;
     }
     .container {
       max-width: 900px;
@@ -72,6 +89,9 @@
 </head>
 <body>
   <header>
+    <div class="cv-button">
+      <a href="cv.pdf" target="_blank">Scarica CV</a>
+    </div>
     <h1>Data Science Portfolio</h1>
     <p>Dottorando in Astronomia</p>
   </header>
