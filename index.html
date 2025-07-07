@@ -2,8 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Marco Martorano | Astrophysicist & Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Marco Martorano</title>
+  <!-- SEO -->
+  <meta name="description" content="Personal website of Marco Martorano, astrophysicist and data scientist">
+  <meta name="keywords" content="Marco Martorano, astrophysicist, astronomer, data scientist, data analyst, astronomy, research, JWST, HST, galaxy structure, high redshift, galaxy, size mass">
+  <meta name="author" content="Marco Martorano">
+  <link rel="canonical" href="https://marcomartorano.github.io/MyPortfolio/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marco Martorano | Astrophysicist & Data Scientist">
+  <meta property="og:description" content="Personal website of Marco Martorano, astrophysicist and data scientist at Ghent University. Research, publications, code, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marcomartorano.github.io/MyPortfolio/">
+  <meta property="og:image" content="https://marcomartorano.github.io/MyPortfolio/profile.jpg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marco Martorano | Astrophysicist & Data Scientist">
+  <meta name="twitter:description" content="Personal website of Marco Martorano, astrophysicist and data scientist. Research, publications, code, and more.">
+  <meta name="twitter:image" content="https://marcomartorano.github.io/MyPortfolio/profile.jpg">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marco Martorano",
+    "image": "https://marcomartorano.github.io/MyPortfolio/profile.jpg",
+    "jobTitle": "Astrophysicist, Data Scientist",
+    "affiliation": "Ghent University",
+    "url": "https://marcomartorano.github.io/MyPortfolio/",
+    "sameAs": [
+      "https://github.com/MarcoMartorano",
+      "https://www.linkedin.com/in/marco-martorano97/"
+    ],
+    "email": "mailto:marco.martorano@ugent.be"
+  }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -12,6 +45,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -25,21 +59,19 @@
     header {
       background: rgba(10, 25, 47, 0.85);
       color: #fff;
-      padding: 2rem;
-      text-align: center;
+      padding: 1.2rem 2rem 1.2rem 2rem;
       position: relative;
       box-shadow: 0 2px 16px 0 rgba(10,25,47,0.18);
       min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .cv-button {
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-      z-index: 2;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
     }
     .cv-button a {
       background-color: #007acc;
@@ -52,10 +84,25 @@
     .cv-button a:hover {
       background-color: #005fa3;
     }
+    nav.navbar {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+    nav.navbar a {
+      color: #9cdcfe;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.4rem 0.7rem;
+      border-radius: 5px;
+      font-size: 1.02rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav.navbar a:hover, nav.navbar a.active {
+      background: #20304a;
+      color: #f9d784;
+    }
     .lang-button {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
       z-index: 2;
     }
     .lang-button button {
@@ -86,6 +133,9 @@
       border-bottom: 2px solid #2c3a59;
       padding-bottom: 0.3rem;
       color: #9cdcfe;
+    }
+    section {
+      scroll-margin-top: 120px;
     }
     .paper {
       margin-bottom: 2rem;
@@ -163,6 +213,18 @@
       box-shadow: 0 -2px 16px 0 rgba(10,25,47,0.13);
       border-radius: 0 0 12px 12px;
     }
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 0.5rem;
+        gap: 0.7rem;
+      }
+      nav.navbar {
+        justify-content: center;
+        margin: 0.7rem 0 0.3rem 0;
+      }
+    }
     @media (max-width: 700px) {
       .bio-section {
         flex-direction: column;
@@ -173,34 +235,41 @@
         padding: 1rem 0.2rem;
       }
       header {
+        flex-direction: column;
         padding: 1.3rem 1rem;
       }
-      .cv-button, .lang-button {
-        position: static;
-        display: block;
-        margin: 0.2rem auto;
+      .header-left, .lang-button {
+        justify-content: center;
         text-align: center;
       }
-      .lang-button {
-        margin-bottom: 0.2rem;
+      nav.navbar {
+        flex-wrap: wrap;
+        gap: 0.7rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="cv-button">
-      <a href="cv.pdf" target="_blank" data-en="Download CV" data-it="Scarica CV">Download CV</a>
+    <div class="header-left">
+      <div class="cv-button">
+        <a href="cv.pdf" target="_blank" data-en="Download CV" data-it="Scarica CV">Download CV</a>
+      </div>
+      <nav class="navbar">
+        <a href="#about" data-en="About me" data-it="Chi sono" class="nav-link">About me</a>
+        <a href="#publications" data-en="Publications" data-it="Pubblicazioni" class="nav-link">Publications</a>
+        <a href="#visualizations" data-en="Scientific visualizations" data-it="Visualizzazioni scientifiche" class="nav-link">Scientific visualizations</a>
+        <a href="#codes" data-en="Codes" data-it="Codici" class="nav-link">Codes</a>
+        <a href="#contact" data-en="Contact" data-it="Contatti" class="nav-link">Contact</a>
+      </nav>
     </div>
     <div class="lang-button">
       <button id="lang-toggle" aria-label="Switch language">IT</button>
     </div>
-    <h1 data-en="Data Science Portfolio" data-it="Portfolio Data Science">Data Science Portfolio</h1>
-    <p data-en="PhD student in Astronomy" data-it="Dottorando in Astronomia">PhD student in Astronomy</p>
   </header>
 
   <div class="container">
-    <section>
+    <section id="about">
       <h2 data-en="About me" data-it="Chi sono">About me</h2>
       <div class="bio-section">
         <img src="profile.jpg" alt="Profile photo">
@@ -211,7 +280,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="publications">
       <h2 data-en="Publications" data-it="Pubblicazioni">Publications</h2>
       <ul>
         <li>
@@ -241,11 +310,11 @@
       </ul>
     </section>
 
-    <section>
+    <section id="visualizations">
       <h2 data-en="Scientific visualizations" data-it="Visualizzazioni scientifiche">Scientific visualizations</h2>
       <div class="paper">
         <h3 data-en="Color gradients in the UVJ plane" data-it="I gradienti di colore nel piano UVJ">Color gradients in the UVJ plane</h3>
-        <img src="Gradients_NiceGals_Compact_comparisonV6Andrea_grid.jpg" alt="UVJ gradients plot">
+        <img src="Gradients_NiceGals_Compact_comparisonV6Andrea_grid.pdf" alt="UVJ gradients plot">
         <p data-en="When observing distant galaxies with powerful telescopes, the light we see reflects different processes depending on the wavelength (from near-UV to near-infrared). This plot shows how luminosity in near-UV (U) and near-infrared (J) varies, using optical light (V) as a reference. Most galaxies show a core dominated by infrared light, while their outer regions are bluer. The grid shows how luminosity ratios vary with stellar age and metallicity. The arrow indicates how U–V and V–J values shift if we add dust in front of the galaxies. Such plots help us understand the dust content, star formation history, and physical components of distant galaxies."
            data-it="Quando osserviamo galassie lontane con i più potenti telescopi, la luce che osserviamo riflette proccessi differenti a seconda della lunghezza d'onda investigata (in questo caso, dal vicino UV all vicino infrarosso). In questo grafico mostro come varia la luminosità nel vicino UV (U) e nel vicino infrarosso (J) usando come riferimento la luce ottica (V). La maggior parte di queste galassie mostra un core dominato dalla luce infrarossa mentre le parti esterne sono tendenzialmente più blu. La griglia mostra come il rapporto di luminosità dovrebbe variare in funzione dell'età delle stelle nella galassie e dell'abbondanza di elementi che non siano idrogeno o elio (es: ossigeno, carbonio, magnesio, neon, ferro etc.). La freccia indica come il i valori di U-V e V-J dovrebbero variare se ponessimo davanti alle galassie uno strato di 'polvere' (molecole complesse che assorbono la luce emessa nell'UV-ottico e la riemettono nel lontano infrarosso). Da grafici come questo è possible capire come varia la presenza di polvere nelle galassie in funzione della loro massa e della loro distanza, interpretare la loro storia di formazione stellare e capire quali sono le loro componenti odierne."
         >When observing distant galaxies with powerful telescopes, the light we see reflects different processes depending on the wavelength (from near-UV to near-infrared). This plot shows how luminosity in near-UV (U) and near-infrared (J) varies, using optical light (V) as a reference. Most galaxies show a core dominated by infrared light, while their outer regions are bluer. The grid shows how luminosity ratios vary with stellar age and metallicity. The arrow indicates how U–V and V–J values shift if we add dust in front of the galaxies. Such plots help us understand the dust content, star formation history, and physical components of distant galaxies.</p>
@@ -273,7 +342,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="codes">
       <h2 data-en="Codes" data-it="Codici">Codes</h2>
       <div class="codes-list">
         <div class="code-item">
@@ -286,6 +355,16 @@
         </div>
         <!-- More codes can be added following this example -->
       </div>
+    </section>
+
+    <section id="contact">
+      <h2 data-en="Contact" data-it="Contatti">Contact</h2>
+      <p>
+        <span data-en="Contact:" data-it="Contatti:">Contact:</span>
+        <a href="mailto:marco.martorano@ugent.be">marco.martorano@ugent.be</a> |
+        <a href="https://github.com/MarcoMartorano" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/marco-martorano97/" target="_blank">Linkedin</a>
+      </p>
     </section>
   </div>
 
@@ -331,6 +410,43 @@
 
     // Set initial language (English)
     switchLanguage("en");
+
+    // Navbar: Highlight active section on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 130;
+      let activeIndex = 0;
+      sections.forEach((section, i) => {
+        if (section && section.offsetTop <= scrollPos) {
+          activeIndex = i;
+        }
+      });
+      navLinks.forEach((link, i) => {
+        if (i === activeIndex) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll);
+
+    // Smooth scroll for nav links (for older browsers)
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 110,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
